@@ -1,7 +1,23 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
+/* import { */
+/*   Popover, */
+/*   PopoverContent, */
+/*   PopoverTrigger */
+/* } from "./Components/UI/Popover"; */
+/* import { */
+/*   Command, */
+/*   CommandEmpty, */
+/*   CommandGroup, */
+/*   CommandInput, */
+/*   CommandItem, */
+/*   CommandList */
+/* } from "./Components/UI/Command"; */
 import "./App.css";
+import { BoardProvider } from "./Components/Trello/BoardProvider";
+import Board from "./Components/Trello/Board";
+import BoardToolbar from "./Components/Trello/BoardToolbar";
+/* import Room from "./Components/RoomEditor/Room"; */
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -13,39 +29,60 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>Welcome to Tauri!</h1>
-
-      <div className="row">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
+    <div
+      style={{
+        padding:'0.5rem',
+      }}
+      className=""
+    >
+      <div
+        style={{
+          display:'flex',
+          flexDirection:'column',
+          gap:'0.5rem',
         }}
       >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
+        <h1>Welcome back!</h1>
+        <p style={{color:'hsla(var(--muted_foreground))'}}>
+          Here's a list of your tasks!
+        </p>
 
-      <p>{greetMsg}</p>
+        <form
+          style={{
+            display:'flex',
+            flexDirection:'column',
+            gap:'0.5rem',
+          }}
+          className="row"
+          onSubmit={(e) => {
+            e.preventDefault();
+            greet();
+          }}
+        >
+          <input
+            style={{
+              width:'24rem',
+            }}
+            id="greet-input"
+            onChange={(e) => setName(e.currentTarget.value)}
+            placeholder="Enter a name..."
+          />
+          <button type="submit">
+            Greet
+          </button>
+        </form>
+
+        <p>{greetMsg}</p>
+      </div>
+
+      {/* <Room/> */}
+      {/* <RoomEditor> */}
+      {/* </RoomEditor> */}
+
+      <BoardProvider>
+        <BoardToolbar />
+        <Board/>
+      </BoardProvider>
     </div>
   );
 }

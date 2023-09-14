@@ -1,0 +1,30 @@
+.button-style {
+  /* display: inline-flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  /* white-space: nowrap; */
+}
+
+/* .button-style[variant="outline"] { */
+/*   color: hsla(var(--base06)); */
+/*   background-color: hsla(var(--primary)); */
+/*   background-color: transparent; */
+/* } */
+/* .button-style[variant="outline"]:hover { */
+/*   background-color: hsla(var(--base06), 0.9); */
+/* } */
+/* .button-style[variant="outline"]:active { */
+/*   background-color: hsla(var(--base06), 0.6); */
+/* } */
+
+/* .button-style[type="submit"] { */
+/*   color: hsla(var(--black)); */
+/*   background-color: hsla(var(--base06)); */
+/* } */
+/* .button-style[type="submit"]:hover { */
+/*   background-color: hsla(var(--base06), 0.9); */
+/* } */
+/* .button-style[type="submit"]:active { */
+/*   background-color: hsla(var(--base06), 0.6); */
+/* } */

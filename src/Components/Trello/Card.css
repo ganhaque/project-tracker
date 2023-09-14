@@ -1,0 +1,71 @@
+.card-edit-button {
+  opacity: 0; /* Hide the toolbar by default */
+  transition: opacity 0.2s; /* Add a smooth transition effect for opacity changes */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem 0.5rem;
+}
+
+.card-edit-button[data-state="open"] {
+  display: none;
+}
+
+.card-wrapper:hover .card-toolbar {
+  opacity: 1; /* Show the toolbar when the card is hovered */
+}
+
+.card-edit-button:hover {
+  opacity: 0.7;
+}
+
+.card-edit-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 0.5rem);
+  z-index: 2;
+}
+
+.card-edit-toolbar > button {
+  background-color: hsla(var(--one_bg1));
+}
+
+.card-wrapper {
+  position: relative;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: hsla(var(--one_bg1));
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  overflow: visible;
+}
+
+.card-label {
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: hsla(var(--base06), 0.3);
+  line-height: 0.875rem;
+  padding: 0 0.125rem;
+}
+
+.label-edit-container {
+  background-color: hsla(var(--one_bg1));
+  border-radius: 0.25rem;
+  border: 1px solid hsla(var(--grey));
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
