@@ -25,7 +25,7 @@
   /* padding-right: 0.75rem; */
 }
 
-.command-input {
+/* .command-input { */
   /* display: flex; */
   /* height: 2.5rem; */
   /* width: 100%; */
@@ -47,7 +47,7 @@
   /* outline-offset: 2px; */
   /* border-bottom-right-radius: 0; */
   /* border-bottom-left-radius: 0; */
-}
+/* } */
 
 .command-group {
   overflow: hidden;

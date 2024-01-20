@@ -14,10 +14,10 @@ import { invoke } from "@tauri-apps/api/tauri";
 /*   CommandList */
 /* } from "./Components/UI/Command"; */
 import "./App.css";
-import { BoardProvider } from "./Components/Trello/BoardProvider";
-import Board from "./Components/Trello/Board";
-import BoardToolbar from "./Components/Trello/BoardToolbar";
-/* import Room from "./Components/RoomEditor/Room"; */
+/* import { BoardProvider } from "./Components/Trello/BoardProvider"; */
+/* import Board from "./Components/Trello/Board"; */
+/* import BoardToolbar from "./Components/Trello/BoardToolbar"; */
+import TurnTable from "./Components/TurnTable";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -75,14 +75,11 @@ function App() {
         <p>{greetMsg}</p>
       </div>
 
-      {/* <Room/> */}
-      {/* <RoomEditor> */}
-      {/* </RoomEditor> */}
-
-      <BoardProvider>
-        <BoardToolbar />
-        <Board/>
-      </BoardProvider>
+      {/* <BoardProvider> */}
+      {/*   <BoardToolbar /> */}
+      {/*   <Board/> */}
+      {/* </BoardProvider> */}
+      <TurnTable/>
     </div>
   );
 }
